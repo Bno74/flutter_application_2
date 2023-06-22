@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_application_2/home.dart';
+import "package:flutter/material.dart";
+import 'package:flutter_application_2/pages/LoginPage.dart';
+import 'pages/homepage.dart';
 
 void main() {
   runApp(MyApp());
@@ -7,15 +8,20 @@ void main() {
 
 class MyApp extends StatelessWidget {
   @override
-  int days = 30;
-  String name = "samin";
-  bool isMale = true;
-
-
-
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: home(),
+      themeMode: ThemeMode.dark,
+      theme: ThemeData(primarySwatch: Colors.deepPurple),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+      ),
+      routes: {
+        "/": (context) =>LoginPage(),
+        "/home": (context) => homepage(),
+        "/login": (context) => LoginPage()
+
+
+      },
     );
   }
 }
