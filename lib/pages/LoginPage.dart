@@ -12,6 +12,8 @@ class _LoginPageState extends State<LoginPage> {
   bool changeButton = false;
 
   final _formKey = GlobalKey<FormState>();
+  
+  
   moveToHome(BuildContext context) async {
     if (_formKey.currentState!.validate()) {
       setState(() {
@@ -51,12 +53,22 @@ class _LoginPageState extends State<LoginPage> {
               SizedBox(
                 height: 0,
               ),
+              
               Padding(
                 padding: const EdgeInsets.symmetric(
                   vertical: 16.0,
                   horizontal: 32.0,
                 ),
               ),
+          
+              
+
+              
+                
+              
+          
+            
+                
               TextFormField(
                   decoration: InputDecoration(
                       hintText: "enter username", 
@@ -134,6 +146,11 @@ class _LoginPageState extends State<LoginPage> {
           ),
         ),
       ),
-    );
+          
+          
+      );
+      
+    
+    
   }
 }
